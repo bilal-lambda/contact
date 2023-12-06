@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Contact Details</title>
+    <script>
+      function collectDetails() {
+        fetch('http://localhost:3000/data?page=contact&user=anon', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+      }
+    </script>
+</head>
+<body>
+    <p>Updated</p>
+    <button onclick="collectDetails()">Share</button>
+</body>
+</html>
