@@ -19,6 +19,12 @@
                 node.remove();
             }
         }
+        function removePlaceholder() {
+            let node = document.getElementById("zip");
+            if (node !== null) {
+                node.removeAttribute("placeholder");
+            }
+        }
     </script>
 </head>
 <body>
@@ -45,5 +51,6 @@
     <a href="test.html">Visit our test page</a>
     <button id="addzip" onclick="addZip()">Show zip</button>
     <button id="removezip" onclick="removeZip()">Remove zip</button>
+    <button id="removeplaceholder" onclick="removePlaceholder()">Remove placeholder</button>
 </body>
 </html>
