@@ -25,6 +25,10 @@
                 node.removeAttribute("placeholder");
             }
         }
+        function changeText() {
+            let node = document.getElementById("addzip");
+            node.innerHTML = "Add zip";
+        }
     </script>
 </head>
 <body>
@@ -52,5 +56,6 @@
     <button id="addzip" onclick="addZip()">Show zip</button>
     <button id="removezip" onclick="removeZip()">Remove zip</button>
     <button id="removeplaceholder" onclick="removePlaceholder()">Remove placeholder</button>
+    <button id="changetext" onclick="changeText()">Change text</button>
 </body>
 </html>
