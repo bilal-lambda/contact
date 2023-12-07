@@ -6,11 +6,18 @@
     <title>Update Contact Details</title>
     <script>
         function addZip() {
+            if (document.getElementById("zip") !== null) return;
             let node = document.createElement("input");
             node.setAttribute("type", "text");
             node.setAttribute("placeholder", "zip");
             node.setAttribute("id", "zip");
             document.getElementsByTagName("form")[0].appendChild(node);
+        }
+        function removeZip() {
+            let node = document.getElementById("zip");
+            if (node !== null) {
+                node.remove();
+            }
         }
     </script>
 </head>
@@ -37,5 +44,6 @@
 
     <a href="test.html">Visit our test page</a>
     <button id="addzip" onclick="addZip()">Show zip</button>
+    <button id="removezip" onclick="removeZip()">Remove zip</button>
 </body>
 </html>
